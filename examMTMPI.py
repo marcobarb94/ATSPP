@@ -233,25 +233,33 @@ def doFun(sfida, LOCAL_SEARCH, MAX_ITER, RANDOM, MAX_LIST, PARALLEL, nomeFilePer
     print("Io sono il thread " + str(rank) + " di " + str(sizeC) + " e sto facendo la sfida: " + sfida)
 
     # Guardo se c'è la soluzione....
+    go = False
 
     if rank == thread0:
         try:
             f = open(fileSoluzione, "r")
             fl = f.readlines()
             f.close()
+            solLoro = []
+            for i in range(1, len(fl)):
+                row = fl[i]
+                splits = row.split(' ')
+                # print(splits)
+                [solLoro.append(int(val))
+                 for val in splits if val != '' and val != '\n']
+            solLoro = [solLoro[i]-1 for i in range(0, len(solLoro))]
+            go = True
+            comm.send(solLoro, dest=ultimoThread)
+
         except:
             print("Non c'è la soluzione! Salto :wink")
-            return
+            # devo gestire questa cosa altrimenti i core stanno ad aspettarmi all'infinito!
 
-        solLoro = []
-        for i in range(1, len(fl)):
-            row = fl[i]
-            splits = row.split(' ')
-            # print(splits)
-            [solLoro.append(int(val))
-             for val in splits if val != '' and val != '\n']
-        solLoro = [solLoro[i]-1 for i in range(0, len(solLoro))]
-        comm.send(solLoro, dest=ultimoThread)
+    go = comm.bcast(go, root=thread0)  # caso scalare
+
+    if(not go):
+        print("Niente Soluzione :cry")
+        return
 
     if rank == ultimoThread:
         solLoro = comm.recv(source=0)
@@ -440,7 +448,7 @@ def main():
     else:
         doFun(sfida, LOCAL_SEARCH, MAX_ITER, RANDOM, MAX_LIST,
               PARALLEL, 'soluzioni.txt', OPTIMIZATION)
-    print("Sono il core" + MPI.COMM_WORLD.comm.Get_rank() + " e ho finito!")
+    print("Sono il core" + MPI.COMM_WORLD.Get_rank() + " e ho finito!")
 
 
 if __name__ == '__main__':
