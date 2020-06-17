@@ -3,16 +3,16 @@
 #SBATCH --job-name ale_openmp
 #SBATCH --error errors_%j.txt
 #SBATCH --output output_%j.txt
-#SBATCH --mail-user rossiale@dei.unipd.it
+#SBATCH --mail-user barbier4@dei.unipd.it
 #SBATCH --mail-type END,FAIL
 #SBATCH --partition allgroups
 #SBATCH --ntasks 1
-#SBATCH --cpus-per-task 8
-#SBATCH --mem 200M
+#SBATCH --cpus-per-task 12
+#SBATCH --mem 100M 
 #SBATCH --time 00:02:00
 
 cd $SLURM_SUBMIT_DIR
 
-export OMP_NUM_THREADS=8
+export OMP_NUM_THREADS=12
 
-srun singularity run --bind Output:/mnt container.sif
+srun singularity run --bind miaCartella:/mnt container.sif
