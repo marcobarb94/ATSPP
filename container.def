@@ -1,0 +1,24 @@
+Bootstrap: library
+From: debian:10
+
+%post
+apt-get update
+apt-get install -y gcc g++ libgomp1 git git-lfs
+git lfs install
+mkdir ${SINGULARITY_ROOTFS}/MyRoot
+cd ${SINGULARITY_ROOTFS}/MyRoot
+git lfs clone https://github.com/Alereds/CapriHPC.git
+cd CapriHPC
+g++ -fopenmp CAPRIComputeNormals.cpp -o CAPRIComputeNormals.o
+
+%runscript
+cd ${SINGULARITY_ROOTFS}/MyRoot/CapriHPC
+./CAPRIComputeNormals.o
+
+%labels
+Author Alessandro Rossi
+Version 1.0
+
+%help
+This is a simple example of Singularity container. The container
+is based on Debian 10 and it contains a C++ program

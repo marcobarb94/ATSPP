@@ -211,13 +211,13 @@ def GreedyPLS(flussi: np.ndarray, distanze: np.ndarray, start: int, LOCAL_SEARCH
 
 
 # Function to summarize all - ricordarsi che si hanno un master (0 - le scritture sono tutte sue) e degli slave nella concezione più comoda
-def doFun(sfida, LOCAL_SEARCH, MAX_ITER, RANDOM, MAX_LIST, PARALLEL, nomeFilePerSoluzioni='soluzioni.txt', OPTIMIZATION=True, OLD_PARSER=False):
+def doFun(sfida, LOCAL_SEARCH, MAX_ITER, RANDOM, MAX_LIST, PARALLEL, filePath, nomeFilePerSoluzioni='soluzioni.txt', OPTIMIZATION=True, OLD_PARSER=False):
     if(not RANDOM):
         MAX_ITER = 1
         MAX_LIST = 1
 
     # filePath = "C:\\Users\\marcobarbiero\\OneDrive\\Documenti\\Dottorato\\Corsi\\IE-4-2020\\Application\\"
-    filePath = "I:\\SkyDrive\\Documenti\\Dottorato\\Corsi\\IE-4-2020\\Application\\"
+
     fileName = filePath + "data\\" + sfida + ".dat"
     fileSoluzione = filePath + "solutions\\" + sfida + ".sln"
 
@@ -258,7 +258,7 @@ def doFun(sfida, LOCAL_SEARCH, MAX_ITER, RANDOM, MAX_LIST, PARALLEL, nomeFilePer
     go = comm.bcast(go, root=thread0)  # caso scalare
 
     if(not go):
-        print("Niente Soluzione :cry")
+        print("Niente Soluzione :cry - prossima sfida!")
         return
 
     if rank == ultimoThread:
@@ -347,9 +347,9 @@ def doFun(sfida, LOCAL_SEARCH, MAX_ITER, RANDOM, MAX_LIST, PARALLEL, nomeFilePer
         if(c % sizeC == rank):  # se è il mio turno di lavorare
             facilityNelNodo = GreedyPLS(flussi, distanze, c, LOCAL_SEARCH, False, MAX_LIST)
             nowCost = costo(facilityNelNodo, flussi, distanze)
-            print(str(c) + ": " + str(facilityNelNodo) + " -> " + str(nowCost))
+            # print(str(c) + ": " + str(facilityNelNodo) + " -> " + str(nowCost))
             if(nowCost < bestCost):
-                print("SWAP")
+                # print("SWAP")
                 bestSol = facilityNelNodo
                 bestCost = nowCost
 
@@ -359,9 +359,9 @@ def doFun(sfida, LOCAL_SEARCH, MAX_ITER, RANDOM, MAX_LIST, PARALLEL, nomeFilePer
             if(c % sizeC == rank):  # se è il mio turno di lavorare
                 facilityNelNodo = GreedyPLS(flussi, distanze, c, LOCAL_SEARCH, RANDOM, MAX_LIST)
                 nowCost = costo(facilityNelNodo, flussi, distanze)
-                print(str(c) + ": " + str(facilityNelNodo) + " -> " + str(nowCost))
+                # print(str(c) + ": " + str(facilityNelNodo) + " -> " + str(nowCost))
                 if(nowCost < bestCost):
-                    print("SWAP")
+                    # print("SWAP")
                     bestSol = facilityNelNodo
                     bestCost = nowCost
     toc = time.perf_counter()
@@ -400,7 +400,7 @@ def doFun(sfida, LOCAL_SEARCH, MAX_ITER, RANDOM, MAX_LIST, PARALLEL, nomeFilePer
                                          loroCost2-100) + "%")
 
         # scrivo sul file
-        outputFile = filePath + nomeFilePerSoluzioni
+        outputFile = nomeFilePerSoluzioni
         f = open(outputFile, "a+")
         print("\n\nRISULTATI per " + sfida, file=f)
         print("Io: " + str(bestSol) + " => "+str(bestCost), file=f)
@@ -420,7 +420,17 @@ def doFun(sfida, LOCAL_SEARCH, MAX_ITER, RANDOM, MAX_LIST, PARALLEL, nomeFilePer
 
 def main():
     # ora ho matrici A e B -> devo fare solo l'algoritmo :sweat
-    sfida = "chr"
+    # print command line arguments
+    sfida = sys.argv[1]
+    if(len(sys.argv) < 3):
+        doveCercareLeSfide = "I:\\SkyDrive\\Documenti\\Dottorato\\Corsi\\IE-4-2020\\Application\\"
+    else:
+        doveCercareLeSfide = sys.argv[2]
+    if(len(sys.argv) < 4):
+        FILE_SOL = "soluzioniCAPRI.txt"
+    else:
+        FILE_SOL = sys.argv[3]
+    print("Sono il core" + str(MPI.COMM_WORLD.Get_rank()) + " in partenza per la sfida " + sfida + " nella cartella " + doveCercareLeSfide + " e scrivero tutto in " + FILE_SOL)
     LOCAL_SEARCH = True
     MAX_ITER = 10  # 0
     RANDOM = True
@@ -433,22 +443,21 @@ def main():
     # end PARAMS
 
     # doveCercareLeSfide = "C:\\Users\\marcobarbiero\\OneDrive\\Documenti\\Dottorato\\Corsi\\IE-4-2020\\Application\\data\\"
-    doveCercareLeSfide = "I:\\SkyDrive\\Documenti\\Dottorato\\Corsi\\IE-4-2020\\Application\\data\\"
 
     if(PAZZIA):
         initSfida = sfida
-        for file in os.listdir(doveCercareLeSfide):
+        for file in os.listdir(doveCercareLeSfide+"\\data\\"):
             if file.startswith(initSfida):
                 if file.endswith(".dat"):
                     sfida = (file[0:-4])
                     # print("Sto facendo la sfida: " + sfida)
                     doFun(sfida, LOCAL_SEARCH, MAX_ITER, RANDOM,
-                          MAX_LIST, PARALLEL, 'soluzioniCAPRI.txt', OPTIMIZATION)
+                          MAX_LIST, PARALLEL, doveCercareLeSfide, FILE_SOL, OPTIMIZATION)
 
     else:
         doFun(sfida, LOCAL_SEARCH, MAX_ITER, RANDOM, MAX_LIST,
-              PARALLEL, 'soluzioni.txt', OPTIMIZATION)
-    print("Sono il core" + MPI.COMM_WORLD.Get_rank() + " e ho finito!")
+              PARALLEL, doveCercareLeSfide, FILE_SOL, OPTIMIZATION)
+    print("Sono il core" + str(MPI.COMM_WORLD.Get_rank()) + " e ho finito alle ore " + str(datetime.datetime.now()) + "!")
 
 
 if __name__ == '__main__':
