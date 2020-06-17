@@ -228,7 +228,7 @@ def doFun(sfida, LOCAL_SEARCH, MAX_ITER, RANDOM, MAX_LIST, PARALLEL, nomeFilePer
     sizeC = comm.Get_size()
     ultimoThread = sizeC-1
     thread0 = 0
-    thread1 = 0  # 2
+    thread1 = 2  # 2
 
     print("Io sono il thread " + str(rank) + " di " + str(sizeC) + " e sto facendo la sfida: " + sfida)
 
@@ -440,6 +440,7 @@ def main():
     else:
         doFun(sfida, LOCAL_SEARCH, MAX_ITER, RANDOM, MAX_LIST,
               PARALLEL, 'soluzioni.txt', OPTIMIZATION)
+    print("Sono il core" + MPI.COMM_WORLD.comm.Get_rank() + " e ho finito!")
 
 
 if __name__ == '__main__':
