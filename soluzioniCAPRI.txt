@@ -1,0 +1,312 @@
+
+
+RISULTATI per chr12a
+Io: [6, 4, 3, 1, 0, 2, 8, 5, 9, 10, 7, 11] => 10192.0
+Loro: [6, 4, 11, 1, 0, 2, 8, 10, 9, 5, 7, 3] => 9552.0
+Errore nel costo: 6.700167504187604%
+I core hanno prodotto: [10214.0, 12096.0, 10192.0, 10214.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:30:51.720799.
+
+
+RISULTATI per chr12b
+Io: [4, 6, 0, 9, 10, 2, 3, 1, 8, 5, 11, 7] => 9742.0
+Loro: [4, 6, 0, 9, 10, 2, 3, 1, 8, 5, 11, 7] => 9742.0
+Errore nel costo: 0.0%
+I core hanno prodotto: [9742.0, 10766.0, 14224.0, 14378.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:30:52.299608.
+
+
+RISULTATI per chr12c
+Io: [0, 6, 1, 9, 8, 7, 11, 10, 2, 5, 4, 3] => 11758.0
+Loro: [6, 4, 0, 2, 9, 3, 7, 5, 8, 10, 1, 11] => 11156.0
+Errore nel costo: 5.39619935460739%
+I core hanno prodotto: [11758.0, 13306.0, 13094.0, 13110.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:30:52.934398.
+
+
+RISULTATI per chr15a
+Io: [4, 6, 13, 12, 1, 5, 7, 2, 9, 10, 8, 11, 3, 0, 14] => 11770.0
+Loro: [4, 9, 7, 12, 11, 10, 13, 1, 3, 5, 6, 14, 2, 0, 8] => 9896.0
+Errore nel costo: 18.936944219886826%
+I core hanno prodotto: [11900.0, 11980.0, 12394.0, 11770.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:30:55.208646.
+
+
+RISULTATI per chr15b
+Io: [11, 6, 14, 2, 1, 0, 4, 3, 10, 9, 8, 12, 5, 13, 7] => 10750.0
+Loro: [3, 12, 14, 0, 8, 1, 4, 11, 5, 13, 6, 2, 9, 10, 7] => 7990.0
+Errore nel costo: 34.54317897371715%
+I core hanno prodotto: [11188.0, 10968.0, 10968.0, 10750.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:30:57.600856.
+
+
+RISULTATI per chr15c
+Io: [12, 1, 4, 6, 9, 0, 11, 5, 7, 2, 13, 8, 3, 10, 14] => 11650.0
+Loro: [12, 1, 4, 6, 7, 0, 13, 5, 3, 2, 14, 8, 11, 10, 9] => 9504.0
+Errore nel costo: 22.579966329966325%
+I core hanno prodotto: [11650.0, 12386.0, 13334.0, 12018.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:30:59.927086.
+
+
+RISULTATI per chr18a
+Io: [7, 8, 4, 15, 13, 3, 12, 16, 2, 9, 0, 5, 1, 14, 6, 10, 11, 17] => 13636.0
+Loro: [2, 12, 5, 3, 17, 11, 9, 4, 0, 10, 7, 6, 16, 13, 8, 15, 14, 1] => 11098.0
+Errore nel costo: 22.86898540277528%
+I core hanno prodotto: [14434.0, 13636.0, 16246.0, 14214.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:31:07.857467.
+
+
+RISULTATI per chr18b
+Io: [3, 0, 6, 2, 7, 1, 10, 4, 13, 5, 16, 8, 15, 11, 12, 14, 9, 17] => 1548.0
+Loro: [0, 1, 3, 2, 4, 5, 7, 8, 6, 11, 9, 10, 12, 13, 15, 14, 16, 17] => 1534.0
+Errore nel costo: 0.9126466753585447%
+I core hanno prodotto: [1548.0, 1556.0, 1556.0, 1588.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:31:12.880805.
+
+
+RISULTATI per chr20a
+Io: [9, 3, 2, 1, 5, 19, 14, 15, 12, 10, 13, 11, 7, 0, 4, 17, 6, 8, 16, 18] => 2472.0
+Loro: [2, 19, 6, 17, 8, 11, 18, 3, 9, 10, 0, 5, 14, 7, 1, 4, 13, 15, 12, 16] => 2192.0
+Errore nel costo: 12.773722627737229%
+I core hanno prodotto: [2472.0, 2778.0, 2856.0, 3118.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:31:23.860177.
+
+
+RISULTATI per chr20b
+Io: [6, 11, 2, 5, 19, 13, 8, 3, 0, 9, 12, 7, 18, 15, 17, 1, 16, 10, 4, 14] => 2546.0
+Loro: [19, 2, 8, 6, 0, 11, 15, 5, 7, 13, 9, 3, 4, 12, 16, 1, 17, 10, 18, 14] => 2298.0
+Errore nel costo: 10.79199303742385%
+I core hanno prodotto: [2832.0, 2914.0, 2712.0, 2546.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:31:34.662605.
+
+
+RISULTATI per chr20c
+Io: [17, 0, 18, 7, 16, 6, 14, 3, 2, 11, 10, 12, 15, 4, 13, 1, 8, 5, 9, 19] => 14812.0
+Loro: [11, 5, 8, 1, 9, 10, 2, 3, 14, 17, 6, 12, 15, 4, 13, 16, 18, 0, 7, 19] => 14142.0
+Errore nel costo: 4.737660868335453%
+I core hanno prodotto: [20654.0, 20654.0, 19366.0, 14812.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:31:48.316094.
+
+
+RISULTATI per chr12a
+Io: [6, 9, 4, 1, 0, 7, 2, 10, 8, 5, 11, 3] => 9916.0
+Loro: [6, 4, 11, 1, 0, 2, 8, 10, 9, 5, 7, 3] => 9552.0
+Errore nel costo: 3.8107202680067047%
+I core hanno prodotto: [9916.0, 10476.0, 10214.0, 10214.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:32:59.609260.
+
+
+RISULTATI per chr12b
+Io: [4, 6, 0, 9, 10, 2, 3, 1, 8, 5, 11, 7] => 9742.0
+Loro: [4, 6, 0, 9, 10, 2, 3, 1, 8, 5, 11, 7] => 9742.0
+Errore nel costo: 0.0%
+I core hanno prodotto: [9742.0, 10766.0, 9742.0, 11628.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:33:00.315027.
+
+
+RISULTATI per chr12c
+Io: [2, 4, 0, 9, 6, 7, 1, 10, 8, 5, 11, 3] => 11414.0
+Loro: [6, 4, 0, 2, 9, 3, 7, 5, 8, 10, 1, 11] => 11156.0
+Errore nel costo: 2.312656866260312%
+I core hanno prodotto: [12528.0, 12810.0, 11414.0, 13178.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:33:00.988804.
+
+
+RISULTATI per chr15a
+Io: [4, 6, 13, 12, 1, 5, 7, 2, 9, 10, 8, 11, 3, 0, 14] => 11770.0
+Loro: [4, 9, 7, 12, 11, 10, 13, 1, 3, 5, 6, 14, 2, 0, 8] => 9896.0
+Errore nel costo: 18.936944219886826%
+I core hanno prodotto: [11900.0, 11980.0, 12132.0, 11770.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:33:03.696909.
+
+
+RISULTATI per chr15b
+Io: [0, 8, 6, 3, 2, 10, 12, 1, 7, 13, 14, 9, 5, 11, 4] => 10048.0
+Loro: [3, 12, 14, 0, 8, 1, 4, 11, 5, 13, 6, 2, 9, 10, 7] => 7990.0
+Errore nel costo: 25.757196495619525%
+I core hanno prodotto: [10048.0, 10884.0, 10968.0, 11038.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:33:06.247066.
+
+
+RISULTATI per chr15c
+Io: [7, 12, 4, 1, 13, 6, 5, 0, 10, 3, 8, 14, 2, 11, 9] => 11726.0
+Loro: [12, 1, 4, 6, 7, 0, 13, 5, 3, 2, 14, 8, 11, 10, 9] => 9504.0
+Errore nel costo: 23.379629629629633%
+I core hanno prodotto: [12702.0, 12454.0, 11726.0, 12018.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:33:08.277395.
+
+
+RISULTATI per chr18a
+Io: [7, 8, 4, 15, 13, 3, 12, 16, 2, 9, 0, 5, 1, 14, 6, 10, 11, 17] => 13636.0
+Loro: [2, 12, 5, 3, 17, 11, 9, 4, 0, 10, 7, 6, 16, 13, 8, 15, 14, 1] => 11098.0
+Errore nel costo: 22.86898540277528%
+I core hanno prodotto: [15594.0, 13636.0, 16410.0, 13874.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:33:16.616638.
+
+
+RISULTATI per chr18b
+Io: [3, 0, 6, 2, 7, 1, 10, 4, 13, 5, 16, 8, 15, 11, 12, 14, 9, 17] => 1548.0
+Loro: [0, 1, 3, 2, 4, 5, 7, 8, 6, 11, 9, 10, 12, 13, 15, 14, 16, 17] => 1534.0
+Errore nel costo: 0.9126466753585447%
+I core hanno prodotto: [1548.0, 1628.0, 1548.0, 1590.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:33:22.431716.
+
+
+RISULTATI per chr20a
+Io: [9, 3, 2, 1, 5, 19, 14, 15, 12, 10, 13, 11, 7, 0, 4, 17, 6, 8, 16, 18] => 2472.0
+Loro: [2, 19, 6, 17, 8, 11, 18, 3, 9, 10, 0, 5, 14, 7, 1, 4, 13, 15, 12, 16] => 2192.0
+Errore nel costo: 12.773722627737229%
+I core hanno prodotto: [2472.0, 2778.0, 2650.0, 3054.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:33:35.229485.
+
+
+RISULTATI per chr20b
+Io: [2, 19, 9, 8, 3, 0, 14, 6, 10, 11, 4, 5, 7, 13, 15, 18, 12, 17, 1, 16] => 2624.0
+Loro: [19, 2, 8, 6, 0, 11, 15, 5, 7, 13, 9, 3, 4, 12, 16, 1, 17, 10, 18, 14] => 2298.0
+Errore nel costo: 14.186248912097483%
+I core hanno prodotto: [2624.0, 2824.0, 2712.0, 2692.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:33:44.979265.
+
+
+RISULTATI per chr20c
+Io: [10, 8, 11, 6, 1, 9, 15, 3, 5, 17, 2, 12, 14, 4, 13, 16, 18, 0, 7, 19] => 16818.0
+Loro: [11, 5, 8, 1, 9, 10, 2, 3, 14, 17, 6, 12, 15, 4, 13, 16, 18, 0, 7, 19] => 14142.0
+Errore nel costo: 18.922358930844297%
+I core hanno prodotto: [20118.0, 20654.0, 16818.0, 19188.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:33:57.949975.
+
+
+RISULTATI per chr12a
+Io: [6, 4, 3, 9, 0, 2, 1, 5, 11, 10, 8, 7] => 10214.0
+Loro: [6, 4, 11, 1, 0, 2, 8, 10, 9, 5, 7, 3] => 9552.0
+Errore nel costo: 6.930485762144059%
+I core hanno prodotto: [10214.0, 10476.0, 11198.0, 10214.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:36:51.863785.
+
+
+RISULTATI per chr12b
+Io: [4, 6, 0, 9, 10, 2, 3, 1, 8, 5, 11, 7] => 9742.0
+Loro: [4, 6, 0, 9, 10, 2, 3, 1, 8, 5, 11, 7] => 9742.0
+Errore nel costo: 0.0%
+I core hanno prodotto: [9742.0, 10766.0, 10102.0, 10102.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:36:52.471584.
+
+
+RISULTATI per chr12c
+Io: [7, 9, 0, 4, 6, 2, 1, 10, 8, 5, 11, 3] => 12270.0
+Loro: [6, 4, 0, 2, 9, 3, 7, 5, 8, 10, 1, 11] => 11156.0
+Errore nel costo: 9.985657941914667%
+I core hanno prodotto: [12720.0, 13700.0, 12270.0, 13178.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:36:53.113373.
+
+
+RISULTATI per chr15a
+Io: [4, 6, 13, 12, 1, 5, 7, 2, 9, 10, 8, 11, 3, 0, 14] => 11770.0
+Loro: [4, 9, 7, 12, 11, 10, 13, 1, 3, 5, 6, 14, 2, 0, 8] => 9896.0
+Errore nel costo: 18.936944219886826%
+I core hanno prodotto: [11900.0, 11980.0, 11852.0, 11770.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:36:55.521577.
+
+
+RISULTATI per chr15b
+Io: [4, 0, 7, 12, 8, 6, 3, 13, 5, 11, 1, 2, 9, 10, 14] => 8938.0
+Loro: [3, 12, 14, 0, 8, 1, 4, 11, 5, 13, 6, 2, 9, 10, 7] => 7990.0
+Errore nel costo: 11.8648310387985%
+I core hanno prodotto: [8938.0, 9508.0, 10882.0, 10882.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:36:58.152706.
+
+
+RISULTATI per chr15c
+Io: [12, 1, 4, 6, 7, 0, 13, 5, 3, 2, 14, 9, 8, 11, 10] => 11424.0
+Loro: [12, 1, 4, 6, 7, 0, 13, 5, 3, 2, 14, 8, 11, 10, 9] => 9504.0
+Errore nel costo: 20.202020202020208%
+I core hanno prodotto: [11424.0, 12454.0, 12812.0, 12018.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:37:00.331986.
+
+
+RISULTATI per chr18a
+Io: [7, 8, 4, 15, 13, 3, 12, 16, 2, 9, 0, 5, 1, 14, 6, 10, 11, 17] => 13636.0
+Loro: [2, 12, 5, 3, 17, 11, 9, 4, 0, 10, 7, 6, 16, 13, 8, 15, 14, 1] => 11098.0
+Errore nel costo: 22.86898540277528%
+I core hanno prodotto: [14020.0, 13636.0, 16080.0, 14444.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:37:07.140735.
+
+
+RISULTATI per chr18b
+Io: [3, 0, 6, 2, 7, 1, 10, 4, 13, 5, 16, 8, 15, 11, 12, 14, 9, 17] => 1548.0
+Loro: [0, 1, 3, 2, 4, 5, 7, 8, 6, 11, 9, 10, 12, 13, 15, 14, 16, 17] => 1534.0
+Errore nel costo: 0.9126466753585447%
+I core hanno prodotto: [1548.0, 1596.0, 1556.0, 1606.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:37:12.065108.
+
+
+RISULTATI per chr20a
+Io: [9, 3, 2, 1, 5, 19, 14, 15, 12, 10, 13, 11, 7, 0, 4, 17, 6, 8, 16, 18] => 2472.0
+Loro: [2, 19, 6, 17, 8, 11, 18, 3, 9, 10, 0, 5, 14, 7, 1, 4, 13, 15, 12, 16] => 2192.0
+Errore nel costo: 12.773722627737229%
+I core hanno prodotto: [2472.0, 2778.0, 3016.0, 2850.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:37:22.502658.
+
+
+RISULTATI per chr20b
+Io: [9, 3, 13, 12, 5, 1, 11, 10, 6, 8, 2, 0, 4, 15, 16, 7, 17, 19, 18, 14] => 2662.0
+Loro: [19, 2, 8, 6, 0, 11, 15, 5, 7, 13, 9, 3, 4, 12, 16, 1, 17, 10, 18, 14] => 2298.0
+Errore nel costo: 15.839860748476937%
+I core hanno prodotto: [2832.0, 2662.0, 2712.0, 2822.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:37:31.261762.
+
+
+RISULTATI per chr20c
+Io: [10, 6, 4, 1, 8, 3, 15, 9, 13, 17, 12, 2, 14, 11, 16, 18, 19, 0, 7, 5] => 16882.0
+Loro: [11, 5, 8, 1, 9, 10, 2, 3, 14, 17, 6, 12, 15, 4, 13, 16, 18, 0, 7, 19] => 14142.0
+Errore nel costo: 19.374911610804702%
+I core hanno prodotto: [20654.0, 19092.0, 16882.0, 17600.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:37:43.880593.
+
+
+RISULTATI per chr12a
+Io: [6, 4, 3, 1, 0, 2, 8, 5, 9, 10, 7, 11] => 10192.0
+Loro: [6, 4, 11, 1, 0, 2, 8, 10, 9, 5, 7, 3] => 9552.0
+Errore nel costo: 6.700167504187604%
+I core hanno prodotto: [10214.0, 11498.0, 10192.0, 10214.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:42:10.203111.
+
+
+RISULTATI per chr12b
+Io: [4, 6, 0, 9, 10, 2, 3, 1, 8, 5, 11, 7] => 9742.0
+Loro: [4, 6, 0, 9, 10, 2, 3, 1, 8, 5, 11, 7] => 9742.0
+Errore nel costo: 0.0%
+I core hanno prodotto: [9742.0, 10766.0, 10102.0, 15656.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:42:10.867892.
+
+
+RISULTATI per chr12c
+Io: [7, 9, 4, 6, 2, 0, 3, 5, 1, 10, 8, 11] => 12518.0
+Loro: [6, 4, 0, 2, 9, 3, 7, 5, 8, 10, 1, 11] => 11156.0
+Errore nel costo: 12.208676945141633%
+I core hanno prodotto: [12518.0, 14036.0, 13094.0, 12954.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:42:11.424708.
+
+
+RISULTATI per chr12a
+Io: [6, 4, 3, 9, 0, 2, 1, 5, 11, 10, 8, 7] => 10214.0
+Loro: [6, 4, 11, 1, 0, 2, 8, 10, 9, 5, 7, 3] => 9552.0
+Errore nel costo: 6.930485762144059%
+I core hanno prodotto: [10214.0, 10580.0, 16136.0, 10214.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:43:03.907000.
+
+
+RISULTATI per chr12b
+Io: [4, 6, 0, 9, 10, 2, 3, 1, 8, 5, 11, 7] => 9742.0
+Loro: [4, 6, 0, 9, 10, 2, 3, 1, 8, 5, 11, 7] => 9742.0
+Errore nel costo: 0.0%
+I core hanno prodotto: [9742.0, 10766.0, 10766.0, 9742.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:43:04.543790.
+
+
+RISULTATI per chr12c
+Io: [2, 4, 0, 9, 6, 7, 1, 10, 8, 5, 11, 3] => 11414.0
+Loro: [6, 4, 0, 2, 9, 3, 7, 5, 8, 10, 1, 11] => 11156.0
+Errore nel costo: 2.312656866260312%
+I core hanno prodotto: [13094.0, 11798.0, 11414.0, 13178.0]
+Settings: LOCAL_SEARCH = True, MAX_ITER = 10, RANDOM = True, MAX_LIST = 3, PARALLEL = True. DateTime = 2020-06-17 16:43:05.172582.

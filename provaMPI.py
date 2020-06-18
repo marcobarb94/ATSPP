@@ -1,3 +1,4 @@
+# coding=UTF8
 from __future__ import division, print_function
 from mpi4py import MPI
 import numpy as np

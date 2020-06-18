@@ -1,7 +1,9 @@
 # Marco Barbiero - QAP - 200220
 # Works with Python 3.7.3 64-bit
+# coding=UTF8
 
 # Try using MPI - [MPI for Python](https://mpi4py.readthedocs.io/en/stable/)
+
 
 # Imports
 import numpy as np
