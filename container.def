@@ -1,6 +1,10 @@
 Bootstrap: library
 From: debian:10
 
+%files
+ATSPP/examMTMPI.py ${SINGULARITY_ROOTFS}/MyRoot
+ATSPP/provaMPI.py ${SINGULARITY_ROOTFS}/MyRoot
+
 %post
 apt-get update
 apt-get install -y git libopenmpi-dev openmpi-bin python3-pip python
@@ -9,13 +13,12 @@ pip3 install numpy
 
 mkdir ${SINGULARITY_ROOTFS}/MyRoot
 cd ${SINGULARITY_ROOTFS}/MyRoot
-git clone https://marcobarb94@github.com/marcobarb94/ATSPP
 cd ATSPP
 ls -a 
 python -c "from mpi4py import MPI"
 
 %runscript
-cd ${SINGULARITY_ROOTFS}/MyRoot/ATSPP
+cd ${SINGULARITY_ROOTFS}/MyRoot/
 mpirun -np 12 python3 examMTMPI.py all /mnt
 
 %labels
