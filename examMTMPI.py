@@ -422,6 +422,8 @@ def main():
     # ora ho matrici A e B -> devo fare solo l'algoritmo :sweat
     # print command line arguments
     sfida = sys.argv[1]
+    if (sfida.lower() == "all"):
+        sfida = ""
     if(len(sys.argv) < 3):
         doveCercareLeSfide = "I:\\SkyDrive\\Documenti\\Dottorato\\Corsi\\IE-4-2020\\Application\\"
     else:
@@ -430,7 +432,7 @@ def main():
         FILE_SOL = "soluzioniCAPRI.txt"
     else:
         FILE_SOL = sys.argv[3]
-    print("Sono il core" + str(MPI.COMM_WORLD.Get_rank()) + " in partenza per la sfida " + sfida + " nella cartella " + doveCercareLeSfide + " e scrivero tutto in " + FILE_SOL)
+    print("Sono il core" + str(MPI.COMM_WORLD.Get_rank()) + " in partenza per la sfida " + sfida + " nella cartella " + doveCercareLeSfide + " e scriverò tutto in " + FILE_SOL)
     LOCAL_SEARCH = True
     MAX_ITER = 10  # 0
     RANDOM = True

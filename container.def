@@ -16,7 +16,7 @@ python -c "from mpi4py import MPI"
 
 %runscript
 cd ${SINGULARITY_ROOTFS}/MyRoot/ATSPP
-python 
+mpirun -np 12 python3 examMTMPI.py all /mnt
 
 %labels
 Author Marco Barbiero
