@@ -220,8 +220,8 @@ def doFun(sfida, LOCAL_SEARCH, MAX_ITER, RANDOM, MAX_LIST, PARALLEL, filePath, n
 
     # filePath = "C:\\Users\\marcobarbiero\\OneDrive\\Documenti\\Dottorato\\Corsi\\IE-4-2020\\Application\\"
 
-    fileName = filePath + "data\\" + sfida + ".dat"
-    fileSoluzione = filePath + "solutions\\" + sfida + ".sln"
+    fileName = filePath + "data/" + sfida + ".dat"
+    fileSoluzione = filePath + "solutions/" + sfida + ".sln"
 
     # parte MPI
 
@@ -450,7 +450,7 @@ def main():
 
     if(PAZZIA):
         initSfida = sfida
-        for file in os.listdir(doveCercareLeSfide+"\\data\\"):
+        for file in os.listdir(doveCercareLeSfide+"/data/"):
             if file.startswith(initSfida):
                 if file.endswith(".dat"):
                     sfida = (file[0:-4])
