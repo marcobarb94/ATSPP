@@ -3,4 +3,4 @@ Material for Advanced topics in scientific and parallel programming with practic
 
 ## MPI
 
-This repo contains the file I developed to solve the Quadratic Assignment Problem (QAP).
+This repo contains the file I developed to solve the Quadratic Assignment Problem (QAP) using MPI technology.
