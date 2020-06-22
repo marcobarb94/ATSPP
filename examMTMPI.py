@@ -1,7 +1,9 @@
 # Marco Barbiero - QAP - 200220
 # Works with Python 3.7.3 64-bit
+# coding=UTF8
 
 # Try using MPI - [MPI for Python](https://mpi4py.readthedocs.io/en/stable/)
+
 
 # Imports
 import numpy as np
@@ -218,8 +220,8 @@ def doFun(sfida, LOCAL_SEARCH, MAX_ITER, RANDOM, MAX_LIST, PARALLEL, filePath, n
 
     # filePath = "C:\\Users\\marcobarbiero\\OneDrive\\Documenti\\Dottorato\\Corsi\\IE-4-2020\\Application\\"
 
-    fileName = filePath + "data\\" + sfida + ".dat"
-    fileSoluzione = filePath + "solutions\\" + sfida + ".sln"
+    fileName = filePath + "data/" + sfida + ".dat"
+    fileSoluzione = filePath + "solutions/" + sfida + ".sln"
 
     # parte MPI
 
@@ -228,7 +230,7 @@ def doFun(sfida, LOCAL_SEARCH, MAX_ITER, RANDOM, MAX_LIST, PARALLEL, filePath, n
     sizeC = comm.Get_size()
     ultimoThread = sizeC-1
     thread0 = 0
-    thread1 = 2  # 2
+    thread1 = 1  # 2
 
     print("Io sono il thread " + str(rank) + " di " + str(sizeC) + " e sto facendo la sfida: " + sfida)
 
@@ -237,6 +239,7 @@ def doFun(sfida, LOCAL_SEARCH, MAX_ITER, RANDOM, MAX_LIST, PARALLEL, filePath, n
 
     if rank == thread0:
         try:
+            print("Apro: " + fileSoluzione)
             f = open(fileSoluzione, "r")
             fl = f.readlines()
             f.close()
@@ -400,7 +403,7 @@ def doFun(sfida, LOCAL_SEARCH, MAX_ITER, RANDOM, MAX_LIST, PARALLEL, filePath, n
                                          loroCost2-100) + "%")
 
         # scrivo sul file
-        outputFile = nomeFilePerSoluzioni
+        outputFile = filePath+"/"+nomeFilePerSoluzioni
         f = open(outputFile, "a+")
         print("\n\nRISULTATI per " + sfida, file=f)
         print("Io: " + str(bestSol) + " => "+str(bestCost), file=f)
@@ -434,7 +437,7 @@ def main():
         FILE_SOL = sys.argv[3]
     print("Sono il core" + str(MPI.COMM_WORLD.Get_rank()) + " in partenza per la sfida " + sfida + " nella cartella " + doveCercareLeSfide + " e scriverò tutto in " + FILE_SOL)
     LOCAL_SEARCH = True
-    MAX_ITER = 10  # 0
+    MAX_ITER = 20  # 0
     RANDOM = True
     MAX_LIST = 3
     PARALLEL = True
@@ -446,9 +449,11 @@ def main():
 
     # doveCercareLeSfide = "C:\\Users\\marcobarbiero\\OneDrive\\Documenti\\Dottorato\\Corsi\\IE-4-2020\\Application\\data\\"
 
+    print("Ciao! Sono il core" + str(MPI.COMM_WORLD.Get_rank()) + " e sono le ore " + str(datetime.datetime.now()) + "!")
+
     if(PAZZIA):
         initSfida = sfida
-        for file in os.listdir(doveCercareLeSfide+"\\data\\"):
+        for file in os.listdir(doveCercareLeSfide+"/data/"):
             if file.startswith(initSfida):
                 if file.endswith(".dat"):
                     sfida = (file[0:-4])
